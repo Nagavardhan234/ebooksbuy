@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            background-color: #000;
+            background: linear-gradient(to bottom right, #000000, #434343);
+            text-align: center;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 0 20px;
+        }
+        .card {
+            background: linear-gradient(to right, #333, #555);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin: 20px 0;
+            text-align: center;
+        }
+        .btn {
+            padding: 15px 30px;
+            font-size: 1rem;
+            color: #000;
+            background: #f0ad4e;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background: #ec971f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2>Complete Your Payment</h2>
+            <p>Click the button below to pay 49 INR via UPI.</p>
+            <button class="btn" id="payBtn">Pay with UPI</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('payBtn').addEventListener('click', function() {
+            // Redirect to UPI payment gateway
+            window.location.href = 'upi://pay?pa=pnagavardhan329@ybl&pn=Your%20p%20naga%20vardhan&am=49&cu=INR';
+            
+            // After payment, redirect to the payment success page
+            setTimeout(function() {
+                window.location.href = 'payment-success.html';
+            }, 5000); // Adjust the delay as needed
+        });
+    </script>
+</body>
+</html>

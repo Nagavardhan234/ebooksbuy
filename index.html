@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading eBook Offer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            background-color: #000;
+            background: linear-gradient(to bottom right, #000000, #434343);
+            text-align: center;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 0 20px;
+        }
+        .hero {
+            background: url('./5290dc5e-6b9a-47a9-aed9-788ae64140c8.jpg') no-repeat center center/cover;
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+        .hero .btn {
+            padding: 15px 30px;
+            font-size: 1rem;
+            color: #000;
+            background: #f0ad4e;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .hero .btn:hover {
+            background: #ec971f;
+        }
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+        .content h2 {
+            font-size: 2rem;
+            margin: 20px 0;
+        }
+        .content p {
+            font-size: 1.25rem;
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        .card {
+            background: linear-gradient(to right, #333, #555);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin: 20px 0;
+            animation: zigzag 3s ease-in-out infinite;
+        }
+        .card:nth-child(1) {
+            animation-delay: 0s;
+        }
+        .card:nth-child(2) {
+            animation-delay: 1s;
+        }
+        .card:nth-child(3) {
+            animation-delay: 2s;
+        }
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .card p {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+        .carousel {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .carousel .carousel-inner {
+            border-radius: 10px;
+        }
+        .footer {
+            background: #222;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes zigzag {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(10px); }
+            50% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+            85%, 100% { transform: translateX(0); }
+        }
+        .more-content {
+            margin: 40px 0;
+            text-align: center;
+        }
+        .more-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .more-content p {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Exclusive Trading eBook Offer</h1>
+                <p>Get 30 eBooks for just 49 INR</p>
+                <button class="btn" onclick="goToPayment()">Buy Now</button>
+            </div>
+        </section>
+        <section class="content" id="content">
+            <h2>Why You Need These Trading eBooks</h2>
+            <p>Unlock the secrets of successful trading with our comprehensive collection of 30 eBooks, curated by industry experts. Whether you are a beginner or an experienced trader, these eBooks will provide you with the knowledge and strategies needed to excel in the trading world.</p>
+            <div class="card">
+                <h3>Comprehensive Guides</h3>
+                <p>Our eBooks cover a wide range of topics including technical analysis, trading psychology, risk management, and more.</p>
+            </div>
+            <div class="card">
+                <h3>Expert Insights</h3>
+                <p>Learn from seasoned traders who have years of experience and have mastered the art of trading.</p>
+            </div>
+            <div class="card">
+                <h3>Affordable Price</h3>
+                <p>Get all 30 eBooks for just 49 INR. Individual eBooks cost 9 INR each, making this bundle a great deal.</p>
+            </div>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card">
+                            <h3>John Doe</h3>
+                            <p>"These eBooks are a game changer! I've improved my trading skills significantly."</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <h3>Jane Smith</h3>
+                            <p>"A must-have collection for any trader. The insights are invaluable."</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <h3>Michael Johnson</h3>
+                            <p>"Affordable and informative. These eBooks have helped me achieve consistent profits."</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+        <section class="more-content">
+            <h2>What's Inside the eBooks?</h2>
+            <p>Each eBook is packed with valuable insights, practical tips, and proven strategies to help you succeed in trading. Here's a sneak peek at what you'll learn:</p>
+            <p>- Technical Analysis: Learn how to read charts and use technical indicators to make informed trading decisions.</p>
+            <p>- Trading Psychology: Understand the psychological aspects of trading and how to maintain a winning mindset.</p>
+            <p>- Risk Management: Discover effective risk management techniques to protect your capital and maximize your profits.</p>
+            <p>- Market Trends: Get insights into the latest market trends and how to capitalize on them for profitable trades.</p>
+        </section>
+        <footer class="footer">
+            <p>&copy; 2024 Trading eBook Offer. All rights reserved.</p>
+        </footer>
+    </div>
+    <script>
+        function goToPayment() {
+            window.location.href = "payment.html";
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
