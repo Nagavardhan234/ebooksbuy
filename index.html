@@ -153,6 +153,30 @@
             margin-bottom: 10px;
             line-height: 1.6;
         }
+        .ebook-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .ebook-item {
+            flex: 1 1 calc(50% - 40px);
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+        }
+        .ebook-item img {
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            .ebook-item {
+                flex: 1 1 calc(100% - 40px);
+            }
+        }
     </style>
 </head>
 <body>
@@ -162,6 +186,7 @@
                 <h1>Exclusive Trading eBook Offer</h1>
                 <p>Get 30 eBooks for just 49 INR</p>
                 <button class="btn" onclick="goToPayment()">Buy Now</button>
+                <button class="btn" onclick="scrollToEbookList()">Explore Products</button>
             </div>
         </section>
         <section class="content" id="content">
@@ -223,6 +248,106 @@
             <p>- Risk Management: Discover effective risk management techniques to protect your capital and maximize your profits.</p>
             <p>- Market Trends: Get insights into the latest market trends and how to capitalize on them for profitable trades.</p>
         </section>
+        <section class="ebook-list" id="ebook-list">
+            <h2>Our 30 eBooks</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="./images/th.jpg" alt="Book 1">
+                          </div>
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="./images/th (1).jpg" alt="Book 2">
+                       </div>
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="./images/th (2).jpg" alt="Book 3">
+                          </div>
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="./images/th (3).jpg" alt="Book 3">
+                      </div>
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="./images/th (4).jpg" alt="Book 3">
+                        </div>
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="https://th.bing.com/th?id=OPAC.dHPd%2f%2bQe9b4eOg474C474&w=592&h=550&o=5&dpr=1.5&pid=21.1" alt="Book 3">
+                </div>
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="https://th.bing.com/th?id=OPAC.yr%2fdcInYfipw7g474C474&w=592&h=550&o=5&dpr=1.5&pid=21.1">
+                </div>
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="https://th.bing.com/th?id=OPAC.jya8gBSV7U4diA474C474&w=220&h=210&c=17&o=5&dpr=1.5&pid=21.1">
+                </div>
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="https://th.bing.com/th?id=OPAC.R83bXs0tKGnCWw474C474&w=220&h=210&c=17&o=5&dpr=1.5&pid=21.1">
+                </div>
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="https://th.bing.com/th?id=OPAC.xf6nLLPLsZJgww474C474&w=592&h=550&o=5&dpr=1.5&pid=21.1">
+                </div>
+
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="https://th.bing.com/th/id/OIP.yWoaxDq6btc-rx9TM64PywAAAA?w=183&h=233&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+                </div>
+
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/51IuPcsvJYL._SY346_.jpg">
+                </div>
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/516yuRe2TwL.jpg">
+                </div>
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1619333511i/57842935.jpg">
+                </div>
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="https://m.media-amazon.com/images/I/41q28VYs-YL.jpg">
+                </div>
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="https://m.media-amazon.com/images/I/512xFuJHkBL._SY300_.jpg">
+                </div>
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="https://th.bing.com/th/id/OIP.cPscb3kTNl1vuFNxZcpfSQAAAA?rs=1&pid=ImgDetMain">
+                </div>
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="https://th.bing.com/th/id/OIP.4zzZyQmVOiq65xkzGE-L1gAAAA?w=186&h=308&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+                </div>
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/51XhLMBPqeL.jpg">
+                </div>
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/51TxrpM7ykL.jpg">
+                </div>
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="https://th.bing.com/th/id/OIP.GEQ8IbWz0AU7m-RYqrRr8gAAAA?w=186&h=279&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+                </div>
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="https://th.bing.com/th/id/OIP._r_3JulkJwGh4Ul_PkwhdgAAAA?w=186&h=278&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+                </div>
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="https://th.bing.com/th/id/OIP.NDaUzVbzgNkyKfnPgMN-PwHaL1?w=186&h=298&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+                </div>
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="https://th.bing.com/th/id/OIP.kLeY6T8tr-NK7BzgnlIHQwAAAA?w=186&h=279&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+                </div>
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/5111TdGm8+L._SY346_.jpg">
+                </div>
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="https://th.bing.com/th/id/OIP.bPjOeQThrWLlwktdO-RHvQHaLl?w=186&h=292&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+                </div>
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="https://th.bing.com/th/id/OIP.EvRvJa8HYc7O23KSed9lZgAAAA?w=186&h=279&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+                </div>
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="https://th.bing.com/th/id/OIP.ex3r6qvc6ke8LQrhVJZj4gAAAA?w=115&h=184&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+                </div>
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="https://m.media-amazon.com/images/I/41XO9f0ZfVL.jpg">
+                </div>
+                <div class="col-md-6 col-lg-4 ebook-item">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/71LQtGVYZKL.jpg">
+                </div>
+
+                           
+                <!-- Add more book items as needed -->
+            </div>
+        </section>
         <footer class="footer">
             <p>&copy; 2024 Trading eBook Offer. All rights reserved.</p>
         </footer>
@@ -230,6 +355,10 @@
     <script>
         function goToPayment() {
             window.location.href = "payment.html";
+        }
+        
+        function scrollToEbookList() {
+            document.getElementById('ebook-list').scrollIntoView({ behavior: 'smooth' });
         }
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
